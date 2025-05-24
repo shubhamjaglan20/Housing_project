@@ -1,39 +1,79 @@
-# 🧠 California Housing Price Prediction Project
+# 🏠 California Housing Price Prediction
 
-This repository contains an **end-to-end Machine Learning project** from the book *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*. It walks through a complete ML workflow using the California housing dataset.
+This is a step-by-step guided machine learning project based on the book **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron**. The goal is to build a model that predicts California housing prices using various data features.
 
-## 📚 Project Overview
+## 📌 Objective
 
-This notebook covers the full pipeline of a supervised regression task — predicting median house values in California districts based on various features.
+To create a complete ML pipeline—from loading data to training and evaluating models—on the California housing dataset.
 
-### 🔍 Key Topics Covered:
-- Exploratory Data Analysis (EDA)
-- Handling missing data
-- Feature engineering
-- Data transformation with pipelines
-- Encoding categorical attributes
-- Building and evaluating models
-- Cross-validation
-- Identifying underfitting/overfitting
-- Trying different ML algorithms (Linear Regression, Decision Trees, Random Forests)
-- Model tuning and improvement
-
-## 🛠️ Technologies Used
+## 🧰 Technologies Used
 
 - Python
 - Jupyter Notebook
+- NumPy, Pandas
+- Matplotlib, Seaborn
 - Scikit-Learn
-- NumPy
-- Pandas
-- Matplotlib & Seaborn (for visualization)
 
-## 🗂️ Project Structure
+## 📊 Dataset Features
 
-- `Project.ipynb`: The main Jupyter Notebook containing code, explanations, and results.
+- Longitude, Latitude
+- Housing Median Age
+- Total Rooms, Total Bedrooms
+- Population, Households
+- Median Income
+- Ocean Proximity (categorical)
+- Median House Value (target)
 
-## 🚀 How to Run
+## ⚙️ Workflow
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+1. **Data Loading and Exploration**  
+   - Understanding data structure  
+   - Identifying missing values  
+   - Visualizing distributions and correlations
+
+2. **Data Cleaning & Preparation**  
+   - Handling missing values (median imputation)  
+   - Dropping/transforming non-numeric attributes  
+   - Creating new features (e.g., `bedrooms_per_room`)  
+   - Encoding categorical data using OneHotEncoder  
+
+3. **Pipeline Construction**  
+   - Use of `Pipeline` and `ColumnTransformer`  
+   - Scaling features using `StandardScaler`  
+   - Combining numerical and categorical transformers
+
+4. **Model Training & Evaluation**  
+   - Models used: Linear Regression, Decision Tree, Random Forest  
+   - Evaluation using RMSE and cross-validation  
+   - Discussion of underfitting and overfitting
+
+5. **Model Comparison**  
+   - Random Forest performed best but showed signs of overfitting  
+   - Cross-validation provided better insight into model generalization  
+
+## ✅ Results
+
+- **Linear Regression**: Underfit the data  
+- **Decision Tree**: Overfit with high training accuracy  
+- **Random Forest**: Best performance but still some overfitting  
+
+## 📈 Metrics
+
+Evaluation done using Root Mean Squared Error (RMSE) and k-fold cross-validation for reliable performance estimation.
+
+## 🔮 Future Improvements
+
+- Hyperparameter tuning (e.g., GridSearchCV)  
+- Adding more derived features  
+- Trying different ML models (e.g., SVM, neural networks)
+
+## 🙌 Acknowledgment
+
+Inspired by the book **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron**.
+
+## 🔗 GitHub Repo
+
+👉 [View the project on GitHub](https://github.com/shubhamjaglan20/Housing_project)
+
+---
+
